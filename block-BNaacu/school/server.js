@@ -15,8 +15,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/sample')
 var app = express();
 
 // middleware
-app.use(express.json())  // caputure the data from post request and send it to the req.body
-
+app.use(express.json()) 
+app.use(express.urlencoded({ extended: false}));  // caputure the data from post request and send it to the req.body
 
 // setup view engine
 app.set("view engine", "ejs");
