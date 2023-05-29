@@ -24,8 +24,12 @@ app.set("views", path.join(__dirname, "views")); // all views present in views d
 
 
 // routing middlewares
+app.get('/', (req, res) => {
+    // GET request on "/"
+});
+
 // app.use('/', indexRouter);
-app.use('/users', usersRouter);  // url with '/books' only go to book.js  
+app.use('/users', usersRouter);  // url with '/users' only go to users.js  
 
 // routes
 
