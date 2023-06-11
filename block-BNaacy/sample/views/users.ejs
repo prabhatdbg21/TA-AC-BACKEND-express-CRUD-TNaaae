@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <a href="/">   <!-- GET request on /books/ -->
+            <h2 class="">Bookstore</h2>
+        </a>
+        <nav>
+            <a href="books/new">  <!-- GET request on /books/new -->
+                <button class=""> Add Book </button>
+            </a>
+        </nav>
+    </header>
+    <div class="">
+        <!-- action="/books"    path where it going to submit form   and method="POST"   method it use is POST-->
+        <form action="/books" method="POST" class="">
+            <h2 class="">Add Book</h2>
+            <input type="text" name="title" class="" placeholder="Add Title">  <!-- name="title"  key must match the name provided in Schema  (models/book.js)-->
+            <textarea class=""  name="description" rows="4" placeholder="Add Description .."></textarea> <!-- name="description" -->
+            <input type="number" name="price" class="" placeholder="Add Price"> <!-- name="price" -->
+            <input type="text" name="author" class="" placeholder="Author name"> <!-- name="author" -->
+            <div class="">
+                <!-- when we submit the form by clicking on Add Book  it will POST request on /books       (with all form details) -->
+                <button class="" type="submit">Add Book</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
