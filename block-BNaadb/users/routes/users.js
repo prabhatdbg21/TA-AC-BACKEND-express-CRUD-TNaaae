@@ -16,7 +16,7 @@ router.get('/new', (req, res) => {
 router.post('/', (req, res, next) => {
      
     // capture data
-    console.log (req.body)
+    // console.log (req.body)
     
     // save it to database
     User.create(req.body)
@@ -63,7 +63,8 @@ router.get('/:id/delete', (req, res, next) => {
 
     User.findByIdAndDelete(id)
         .catch((err) => next(err))
-        .then(() => {
+        .then((deletedUser) => {
+            console.log(deletedUser)
             res.redirect("/users")
         })
 })
