@@ -23,6 +23,17 @@ app.use(express.urlencoded ({extended: false}))
 // routing middlewares
 app.use('/users', userRouter);
 
+// Error handler middlewares
+app.use((req, res, next) => {
+    res.send('Page not Found');
+})
+
+// Custom error handler
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.send(err);
+})
+
 // listener
 app.listen(3000, () => {
     console.log('server is listening on port 3k')
