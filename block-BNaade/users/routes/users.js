@@ -54,7 +54,7 @@ router.post('/:id', (req, res, next) => {
     User.findByIdAndUpdate(id, req.body)
         .catch((err) => next(err))
         .then((userDet) => {
-            res.redirect("/users/" + id)
+            res.redirect("/users")
         })
 })
 
