@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user')
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
     
     User.find({})
         .catch((err) => next(err))
@@ -34,7 +34,7 @@ router.get('/:id', (req, res, next) => {
         .catch((err) => next(err))
         .then((userDet) => {
             console.log(userDet);
-            res.render('usersDetails', {user: userDet}); // book is key use in bookDetails.ejs page
+            res.render('usersDetails', {user: userDet}); // user is key use in usersDetails.ejs page
         })
 })
 
