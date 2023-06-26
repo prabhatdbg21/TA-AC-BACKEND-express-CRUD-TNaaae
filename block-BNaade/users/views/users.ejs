@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <a href="/users">   <!-- GET request on /books/ -->
+            <h2 class="">Bookstore</h2>
+        </a>
+        <nav>
+            <a href="/users/new">  <!-- GET request on /books/new -->
+                <button class=""> Add Book </button>
+            </a>
+        </nav>
+    </header>
+    <div class="prabhat">
+        <h1 class=""> Lising Books </h1>
+        <% users.forEach(user => { %>
+            <section class="">
+                <div class="">
+                    <h2 class=""> <%= user.name %> </h2>
+                    <p class=""> <%= user.email %> </p>   
+                    
+                    <a href="/users/<%= user._id %>">    
+                        <button class="">Show</button>
+                    </a>
+                    
+                </div>
+            </section>
+        <% }) %>
+    </div>
+</body>
+</html>
