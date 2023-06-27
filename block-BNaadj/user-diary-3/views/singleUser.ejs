@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <header class="">
+            <a href="/users">   <!-- GET request on /books/ -->
+                <h2 class="">List of users</h2>
+            </a>
+        </header>
+        <h1 class=""> <%=  user.name %> </h1>  <!-- here book is key came from routes/books.js  page -->
+        <h2 class=""> <%=  user.email %> </h2>
+        <p class=""> <%=  user.age %> </p>
+        <p class=""> <%=  user.address %> </p>
+        <p class=""> <%=  user.bio %> </p>
+        <p class=""> <%=  user.hobbies %> </p>
+        <div class="">
+            <a href="/users/<%= user.id %>/edit">
+                <button class=""> Edit</button>
+            </a>
+            <a href="/users/<%= user.id %>/delete">
+                <button class=""> Delete</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
